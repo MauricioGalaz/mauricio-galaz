@@ -1,0 +1,7 @@
+{
+  "name": "mauricio-galaz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
