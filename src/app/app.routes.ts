@@ -1,13 +1,22 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [
+export const appRoutes: Routes = [
   {
     path: 'home',
-    loadComponent: () => import('./home/home.page').then((m) => m.HomePage),
+    loadChildren: () => import('./home/home.page').then(m => m.HomePage)
   },
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full',
+    pathMatch: 'full'
   },
+  {
+    path: 'gestion-de-citas',
+    loadChildren: () => import('./gestion-de-citas/gestion-de-citas.page').then(m => m.GestionCitasPageModule)
+
+  },
+  {
+    path: 'configuracion',
+    loadChildren: () => import('./configuracion/configuracion.module').then(m => m.ConfiguracionModule)
+  }
 ];
